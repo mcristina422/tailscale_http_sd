@@ -1,0 +1,25 @@
+# This is an example .goreleaser.yml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+before:
+  hooks:
+    - go mod download
+builds:
+  - binary: tailscale_http_sd
+    id: linux
+    goos:
+    - linux
+    goarch:
+    - amd64
+    - arm64
+  - binary: tailscale_http_sd
+    id: mac
+    goos:
+    - darwin
+    goarch:
+    - amd64
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
