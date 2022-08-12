@@ -13,6 +13,8 @@ HTTP Service Discovery was added recently (and bugs fixed) so use at least prome
 You must provide the hostnames of the devices you wish to enable
 `./tailscale_http_sd --host server-1 --host pi4`
 
+TODO: expose more ways of enabling a host. `--all` or maybe using tailscale tags etc 
+
 # prometheus endpoint
 tailscale_http_sd will return the enabled devices as targets in [HTTP SD format](https://prometheus.io/docs/prometheus/latest/http_sd/#http_sd-format) at `localhost:8773/prometheus`
 ```json
